@@ -1,0 +1,15 @@
+version: "3"
+services:
+  node:
+    image: node:16
+    container_name: Blog-Node
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - 3333:3333
+
