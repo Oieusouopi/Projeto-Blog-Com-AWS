@@ -1,7 +1,7 @@
 import uniqid from "uniqid";
 
 export class User {
-	id: string;
+	protected _id: string;
 	name: string;
 	email: string;
 	nickName: string;
@@ -12,9 +12,9 @@ export class User {
 		this.nickName = props.nickName;
 		this.password = props.password;
 		if (!id) {
-			this.id = uniqid();
+			this._id = uniqid();
 		} else {
-			this.id = id;
+			this._id = id;
 		}
 	}
 }
