@@ -4,4 +4,5 @@ export interface ICreateUserDTO {
     nickName: string,
     password: string,
     email: string,
+    admin: boolean,
 }
