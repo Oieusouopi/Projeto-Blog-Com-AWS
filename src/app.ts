@@ -12,7 +12,7 @@ class App {
 		}));
 	}
 
-	public start(PORT: string | undefined): void {
+	public start(PORT: number): void {
 		this.app.listen(PORT, () => console.log(`rodando na porta ${ PORT }`));
 	}
 }
