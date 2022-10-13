@@ -1,3 +1,6 @@
 import App from "./app";
+import "dotenv/config";
 
-new App().start();
+const PORT: string | undefined = process.env.PORT;
+
+new App().start(PORT);

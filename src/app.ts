@@ -12,8 +12,8 @@ class App {
 		}));
 	}
 
-	public start(): void {
-		this.app.listen(3333, () => console.log("rodando na porta 3333"));
+	public start(PORT: string | undefined): void {
+		this.app.listen(PORT, () => console.log(`rodando na porta ${ PORT }`));
 	}
 }
 
