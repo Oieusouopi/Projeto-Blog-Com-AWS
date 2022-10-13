@@ -5,7 +5,7 @@ import { ICreateUserDTO } from "./interfaces/ICreateUserDTO";
 export class CreateUserCase {
 	constructor(private userRepository: IUserRepository) {}
 
-	execute = async (userData: ICreateUserDTO): Promise<void> => {
+	public execute = async (userData: ICreateUserDTO): Promise<void> => {
 		const user = new User(userData);
         
 		await this.userRepository.create(user);
