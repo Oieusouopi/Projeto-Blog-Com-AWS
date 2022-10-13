@@ -1,10 +1,11 @@
 import { Pool } from "mysql2/promise";
 import { User } from "../../entities/User";
+import connection from "../../gateway/connection";
 import { IUserRepository } from "../IUserRepository";
 
 export class UserRepository implements IUserRepository {
 	private connection: Pool;
-	constructor(connection: Pool) {
+	constructor() {
 		this.connection = connection;
 	}
 
