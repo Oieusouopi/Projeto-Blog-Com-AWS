@@ -1,4 +1,4 @@
-import uniqid from "uniqid";
+import { uuid } from "uuidv4";
 
 export class User {
 	protected _id: string;
@@ -14,7 +14,7 @@ export class User {
 		this.nickName = props.nickName;
 		this.password = props.password;
 		if (!id) {
-			this._id = uniqid();
+			this._id = uuid();
 		} else {
 			this._id = id;
 		}
