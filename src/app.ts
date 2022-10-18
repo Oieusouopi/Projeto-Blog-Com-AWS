@@ -1,4 +1,5 @@
 import express, { Request, Response } from "express";
+import router from "./routes/MainRouter";
 class App {
 	private app: express.Express;
 
@@ -6,6 +7,8 @@ class App {
 		this.app = express();
 
 		this.app.use(express.json());
+
+		this.app.use(router);
 
 		this.app.get("/", (_req: Request, res: Response) => res.json({
 			message: "Hello World"
