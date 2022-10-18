@@ -1,10 +1,8 @@
 import { Router } from "express";
+import UserRouter from "./UserRouter";
 
-export class MainRouter {
-	router: Router;
-	constructor() {
-		this.router = Router();
+const router = Router();
 
-		this.router.use("/users");
-	}
-}
+router.use("/users", UserRouter);
+
+export default router;
