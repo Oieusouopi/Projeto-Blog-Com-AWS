@@ -1,7 +1,7 @@
-import { uuid } from "uuidv4";
+import { v4 as uuid_v4 } from "uuid";
 
 export class User {
-	protected _id: string;
+	id: string;
 	name: string;
 	email: string;
 	nickName: string;
@@ -14,9 +14,9 @@ export class User {
 		this.nickName = props.nickName;
 		this.password = props.password;
 		if (!id) {
-			this._id = uuid();
+			this.id = uuid_v4();
 		} else {
-			this._id = id;
+			this.id = id;
 		}
 	}
 }
