@@ -10,9 +10,9 @@ export class UserRepository implements IUserRepository {
 	}
 
 	async create(user: User): Promise<void> {
-		const {name, email, nickName, password, admin} = user;
-		const query = "INSERT INTO Users (name, email, nick_name, password, admin) VALUES (?, ?, ?, ?, ?)";
-		await this.connection.execute(query, [name, email, nickName, password, admin]);
+		const {id, name, email, nickName, password, admin} = user;
+		const query = "INSERT INTO users (id, name, email, nick_name, password, admin) VALUES (?, ?, ?, ?, ?, ?)";
+		await this.connection.execute(query, [id, name, email, nickName, password, admin]);
 	}
     
 	// async read(name: string): Promise<User> {}
