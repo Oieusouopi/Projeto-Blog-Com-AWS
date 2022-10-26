@@ -4,7 +4,7 @@ import { factoryCreateUser } from "../UserCases/CreateUser";
 const userRouter = Router();
 
 userRouter.get("/", (req, res) => {
-	res.json({message: "pegouj"});
+	res.json({message: "pegou"});
 });
 
 userRouter.post("/register", (req: Request, res: Response, next: NextFunction) => {
