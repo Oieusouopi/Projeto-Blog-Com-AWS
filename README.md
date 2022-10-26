@@ -28,6 +28,61 @@ MYSQL_USER = "root"
 MYSQL_DATABASE = "blog_db"
 ```
 
+## Teste
+
+O script para testar as funções pela API é `npm run test` ao utilizar este script vai mostrar todas as funções testadas.
+
+## Aplicação
+
+Esta aplicação é para desenvolver uma aplicação de um blog como o twitter que tem integração com o back e o front este repositório é para o back-end onde este repositório se concentra no usuário isto é nos atributos dos usuário e admin no login e no registro dos usuários.
+
+## Arquitetura
+```
+.
+├── src
+│   ├──controller --> Camada para a requisição e resposta para o usuário camada mais externa
+│   │   ├──UserController
+│   │   │   ├──CreateUserController.ts
+│   ├──database --> Criação das tabelas
+│   │   ├──CreateTable
+│   │   │   ├──User.ts
+│   │   ├──userCreateTable.ts
+│   ├──entities --> Camada de como deve ser as entidades do banco
+│   │   ├──User.ts
+│   ├──gateway
+│   │   ├──connection.ts --> configuração do banco com o host
+│   ├──repositories --> Área do banco
+│   │   ├──implementation
+│   │   │   ├── UserRepository.ts --> implementação do banco de dados de usuário com suas funções
+│   │   ├──IUserRepository.ts --> interface de como deve ser a implementação do banco
+│   ├──routes --> Rotas para a URL da API
+│   │   ├──MainRouter.ts
+│   │   ├──UserRouter.ts
+│   ├──UserCases --> Casos para o usuário
+│   │   ├──CreateUser
+│   │   │   ├──interfaces
+│   │   │   │   ├──ICreateUserDTO.ts --> interface para criação do usuário.
+│   │   │   ├──CreateUserCase.ts --> Camada que conecta com o repositorio a camada que conecta com o banco.
+│   │   │   ├──index.ts --> factory a área para montar todas as camads.
+│   │   │   ├──validationUserBody.ts --> Camada de validação para a criação do usuário
+│   │   ├──DeleteUser
+│   │   ├──ReadUser
+│   │   ├──Tests
+│   │   ├──UpdateUser
+│   ├──app.ts --> Arquivo onde tem a construção da aplicação e suas configurações
+│   ├──server.ts --> Arquivo onde começa a aplicação para starta em que porta estará
+├──.env.example
+├──.eslintignore
+├──.eslintrc.json
+├──docker-compose.yml
+├──package-lock.json
+├──package.json
+├──README.MD
+└──tsconfig.json
+```
+## Criação do usuário 
+A primeira parte temos o registro dos usuários onde iremos precisar do email,senha,nome,apelido para a criação do usuário
+
 ## Tecnologias utilizadas
 
 - NodeJS (Express)
