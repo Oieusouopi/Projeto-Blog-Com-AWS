@@ -17,11 +17,29 @@ Estamos utilizando docker então se você não quiser instalr nada e tiver o doc
 
 Localmente se já tiver todas as dependências instaladas no seu projeto basta no seu terminal utilizar o comando `npm install` para instalar as dependências do node e `npm run dev` para rodar localmente este projeto.
 
+### Antes de testar a aplicação
+
+Você verá que tem uma pasta com o nome de `.env.example` lá vai ter o exemplo do .env que você deve seguir sugiro que você só mantenha como esta o .env que ele já esta configurado mas caso queira alterar suas configurações no .env você deverá alterar no docker-compose.yml também
+
+```
+MYSQL_HOST = "localhost"
+MYSQL_PASSWORD = "1234"
+MYSQL_USER = "root"
+MYSQL_DATABASE = "blog_db"
+```
+
 ## Tecnologias utilizadas
 
-- NodeJs
+- NodeJS (Express)
 - Docker
+- Unit Test(Mocha, Chai, Sinon)
+- Lint (EsLint)
+- Banco de Dados (MySQL)
 
 ## Linguagem de programação utilizada
 
 - TypeScript
+
+## Linguagem do banco
+
+- SQL
