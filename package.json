@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha -r ts-node/register ./src/**/*.test.ts",
     "dev": "nodemon --watch 'src/' --exec 'ts-node src/server.ts' -e ts",
-    "create-table": "ts-node src/database/useCreateTable.ts -e ts"
+    "create-table": "ts-node src/database/userCreateTable.ts -e ts"
   },
   "repository": {
     "type": "git",
