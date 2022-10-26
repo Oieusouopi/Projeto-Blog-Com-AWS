@@ -1,0 +1,7 @@
+export default `CREATE TABLE users (
+id VARCHAR(36) PRIMARY KEY, 
+name VARCHAR(30) NOT NULL, 
+email VARCHAR(30) NOT NULL UNIQUE, 
+nick_name VARCHAR(30) NOT NULL UNIQUE, 
+password VARCHAR(30) NOT NULL, 
+admin BIT NOT NULL);`;
