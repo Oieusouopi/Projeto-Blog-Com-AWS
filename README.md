@@ -80,8 +80,28 @@ Esta aplicação é para desenvolver uma aplicação de um blog como o twitter q
 ├──README.MD
 └──tsconfig.json
 ```
-## Criação do usuário 
-A primeira parte temos o registro dos usuários onde iremos precisar do email,senha,nome,apelido para a criação do usuário
+## Criação do usuários
+
+### Arquivos onde estarão para a crição do usuário
+
+- `./src/UserCases/CreateUser/CreateUserCase.ts` -> Camada de conexão com o banco.
+- `./src/UserCases/CreateUser/ValidationUserBody.ts` -> Camada de validação.
+- `./src/controller/UserController/CreateUserController.ts` -> Camada de requisição e resposta do usuário.
+
+A primeira parte temos o registro dos usuários onde iremos precisar do email,senha,nome,apelido para a criação do usuário isto é o corpo da sua requisição pede para ter esses atributos exemplo:
+
+```
+"email": "emailQualquer@emailQualquer.com",
+"password": "UmaSenha",
+"nickName": "QualquerApelido",
+"name": "SeuNome"
+```
+Resposta se usuário for criado com sucesso:
+
+```
+status: 201,
+message: "Usuário criado com sucesso"
+```
 
 ## Tecnologias utilizadas
 
