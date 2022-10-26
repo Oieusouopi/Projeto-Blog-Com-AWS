@@ -10,8 +10,11 @@ describe("Creating user in usecases layers", () => {
 	beforeEach(() => {
 		sinon.stub(userRepository, "create").resolves();
 	});
+	afterEach(() => {
+		sinon.restore();
+	});
 	it("Creating user with sucessfully", async () => {
-		const res = await createUserCase.execute({ id:"1",name:"rafael", nickName:"oieusouopi",password:"1234567",email:"rafasc866@gmail.com",admin:true,});
+		const res = await createUserCase.execute({ id:"1",name:"rafael", nickName:"oieusouopi",password:"1234567",email:"rafasc866@gmail.com",admin:true});
 		chai.expect(res).to.be.equals(undefined);
 	});
 });
