@@ -15,7 +15,7 @@ describe("Validation body to creating user", () => {
 	afterEach(() => {
 		sinon.restore();
 	});
-	it("sucessfully if all DTO is alright", async () => {
+	it("Sucessfully if all DTO is alright", async () => {
 		const res = await validationUserBody.execute({ id:"1",name:"rafael", nickName:"oieusouopi",password:"1234567",email:"rafasc866@gmail.com",admin:true});
 		chai.expect(res).to.be.equals(undefined);
 	});
