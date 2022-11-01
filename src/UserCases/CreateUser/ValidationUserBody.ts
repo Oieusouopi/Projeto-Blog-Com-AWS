@@ -16,7 +16,7 @@ export class ValidationUserBody {
 
 	private validUserFields = (userData: ICreateUserDTO) => {
 		const { name, nickName, password, email, admin } = userData;
-		if (!name && !nickName && !password && !email && !admin) {
+		if (name && nickName && password && email && admin) {
 			return Error("Algum campo está vazio");
 		}
 	};
