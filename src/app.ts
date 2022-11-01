@@ -9,13 +9,13 @@ class App {
 
 		this.app.use(express.json());
 
-		this.app.use(router);
-
-		this.app.use(treatedError);
-
 		this.app.get("/", (_req: Request, res: Response) => res.json({
 			message: "Hello World"
 		}));
+
+		this.app.use(router);
+		this.app.use(treatedError);
+
 	}
 
 	public start(PORT: number): void {

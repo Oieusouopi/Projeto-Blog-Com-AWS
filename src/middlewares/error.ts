@@ -1,8 +1,8 @@
-import { ErrorRequestHandler, Request, Response } from "express";
+import { ErrorRequestHandler, NextFunction, Request, Response } from "express";
 import { errorCatalog, ErrorTypes } from "../UserCases/utils/ErrorCatalog";
 
 const treatedError: ErrorRequestHandler = (
-	err: Error, _req: Request, res: Response) => {
+	err: Error, _req: Request, res: Response, next: NextFunction) => {
 	const messageAsErrorType = err.message as keyof typeof ErrorTypes;
 	const mappedError = errorCatalog[messageAsErrorType];
 	if (mappedError) {

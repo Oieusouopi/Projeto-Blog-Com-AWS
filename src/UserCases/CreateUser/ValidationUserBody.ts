@@ -23,7 +23,7 @@ export class ValidationUserBody {
 	};
 
 	private validationName = (name: string) => {
-		if (name.length <= 7) {
+		if (name.length <= 3) {
 			throw Error(ErrorTypes.nameSize);
 		}
 	};
