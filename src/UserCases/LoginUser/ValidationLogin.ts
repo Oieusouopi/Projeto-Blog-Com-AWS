@@ -1,11 +1,11 @@
 import { IReadUserDTO } from "./interfaces/IReadUserDTO";
-import ReadUserCase from "./LoginUserCase";
+import LoginUserCase from "./LoginUserCase";
 
 export default class ValidationLogin {
-	constructor(private readUserCase: ReadUserCase) {}
+	constructor(private loginUserCase: LoginUserCase) {}
 
 	public execute = async (userData: IReadUserDTO) => {
 		// const { email, password } = userData;
-		await this.readUserCase.execute(userData);
+		await this.loginUserCase.execute(userData);
 	};
 }

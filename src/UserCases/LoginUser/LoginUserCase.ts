@@ -2,7 +2,7 @@ import { IUserRepository } from "../../repositories/IUserRepository";
 import { IReadUserDTO } from "./interfaces/IReadUserDTO";
 import { User } from "../../entities/User";
 
-export default class ReadUserCase {
+export default class LoginUserCase {
 	constructor(private userRepository: IUserRepository) {}
 
 	public execute = async (userData: IReadUserDTO): Promise<User> => {
