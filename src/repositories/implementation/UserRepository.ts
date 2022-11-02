@@ -15,7 +15,11 @@ export class UserRepository implements IUserRepository {
 		await this.connection.execute(query, [id, name, email, nickName, password, admin]);
 	}
     
-	// async read(name: string): Promise<User> {}
+	async login(userEmail: string): Promise<string> {
+		const query = "SELECT email FROM users WHERE email = ?";
+		await this.connection.execute(query, [userEmail]);
+		return userEmail;
+	}
 
 	// async update(name: string): Promise<User> {}
 
