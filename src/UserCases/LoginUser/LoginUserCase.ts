@@ -1,11 +1,10 @@
 import { IUserRepository } from "../../repositories/IUserRepository";
 import { IReadUserDTO } from "./interfaces/IReadUserDTO";
-import { User } from "../../entities/User";
 
 export default class LoginUserCase {
 	constructor(private userRepository: IUserRepository) {}
 
-	public execute = async (userData: IReadUserDTO): Promise<User> => {
+	public execute = async (userData: IReadUserDTO): Promise<string> => {
 		const user = await this.userRepository.login(userData.email);
 		return user;
 	};
