@@ -5,7 +5,7 @@ Feito por Rafael Santos Carvalho qualquer problema entre em contato rafasc866@gm
 ## Sobre
 
 Aqui temos um projeto para desenvolver um site de blog onde pode fazer suas postagens e os usuários
-possam interagir com você a ideia é começar a criar uma comunidade, mas também evoluir como vou fazer um deploy apenas em heroku esta inicialmente servindo para desenvolvimento pessoal.
+possam interagir com você a ideia é começar a criar uma comunidade, mas também evoluir como vou fazer um deploy apenas com AWS esta inicialmente servindo para desenvolvimento pessoal.
 
 ## Docker vs localmente
 
